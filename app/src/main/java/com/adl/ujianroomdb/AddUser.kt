@@ -26,9 +26,9 @@ class AddUser : AppCompatActivity() {
         setContentView(R.layout.activity_add_user)
 
         button.isEnabled = false
-        if(ActivityCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED
-            && ActivityCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED)
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission,ACCESSS_COARSE_lOCATION),
+        if(ActivityCompat.checkSelfPermission(this,android.Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED
+            && ActivityCompat.checkSelfPermission(this,android.Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED)
+                ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION,android.Manifest.permission.ACCESS_COARSE_LOCATION),
                     111)
         else
             button.isEnabled = true
@@ -108,7 +108,7 @@ class AddUser : AppCompatActivity() {
 
                 val intent = Intent()
                 intent.putExtra("data",dataUser)
-                setResult(Activity.RESULT_OK,intent)
+                setResult(RESULT_OK,intent)
                 finish()
             }
         })
